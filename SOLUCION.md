@@ -2,7 +2,32 @@
 
 ## Contract Reception Conversational Agent
 
-## 1. Solution Overview
+## Live Demo
+
+The application is publicly deployed on Render.
+
+**Live URL:**
+
+https://periferia-contract-reception-agent.onrender.com
+
+**Health endpoint:**
+
+https://periferia-contract-reception-agent.onrender.com/api/health
+
+The deployed application includes:
+
+- conversational contract processing;
+- visible tool execution;
+- deterministic validation;
+- human-in-the-loop confirmation;
+- simulated SharePoint registration;
+- contract alerts.
+
+The deployment uses environment variables for runtime secrets and does not expose API keys in the source repository.
+
+---
+
+# 1. Solution Overview
 
 This solution implements a conversational contract-reception agent for Periferia IT Group.
 
