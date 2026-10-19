@@ -99,13 +99,25 @@ function renderMarkdown(
 ) {
   if (
     typeof marked ===
-    "undefined"
+      "undefined" ||
+    typeof DOMPurify ===
+      "undefined"
   ) {
-    return text;
+    return "";
   }
 
-  return marked.parse(
-    text
+  const unsafeHtml =
+    marked.parse(
+      text
+    );
+
+  return DOMPurify.sanitize(
+    unsafeHtml,
+    {
+      USE_PROFILES: {
+        html: true
+      }
+    }
   );
 }
 
