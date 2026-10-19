@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Periferia Contract Agent
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/styles.css"
+  >
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+  ></script>
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="topbar">
+
+      <div>
+        <p class="eyebrow">
+          PERIFERIA IT GROUP
+        </p>
+
+        <h1>
+          Contract Reception Agent
+        </h1>
+
+        <p class="subtitle">
+          AI-assisted contract intake with deterministic validation and human approval.
+        </p>
+      </div>
+
+      <div
+        id="status"
+        class="status"
+      >
+        Connecting...
+      </div>
+
+    </header>
+
+    <section class="quick-actions">
+
+      <button
+        type="button"
+        class="quick-button"
+        data-prompt="Show me the pending contract inbox messages."
+      >
+        Show pending inbox
+      </button>
+
+      <button
+        type="button"
+        class="quick-button"
+        data-prompt="Process and register msg-001."
+      >
+        Process msg-001
+      </button>
+
+      <button
+        type="button"
+        class="quick-button"
+        data-prompt="Process and register msg-006."
+      >
+        Test human review
+      </button>
+
+      <button
+        type="button"
+        class="quick-button"
+        data-prompt="Generate contract alerts."
+      >
+        Generate alerts
+      </button>
+
+    </section>
+
+    <section class="layout">
+
+      <div class="chat-panel">
+
+        <div
+          id="messages"
+          class="messages"
+        >
+
+          <div class="message assistant">
+
+            <div class="message-label">
+              AGENT
+            </div>
+
+            <div class="message-body">
+              <p>
+                Hello. I can inspect the contract inbox, extract and validate contracts,
+                register approved records, and generate contract alerts.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <form
+          id="chat-form"
+          class="composer"
+        >
+
+          <textarea
+            id="message-input"
+            placeholder="Ask the contract agent something..."
+            rows="3"
+          ></textarea>
+
+          <button
+            id="send-button"
+            type="submit"
+          >
+            Send
+          </button>
+
+        </form>
+
+      </div>
+
+      <aside class="activity-panel">
+
+        <div class="activity-heading">
+
+          <div>
+            <p class="eyebrow">
+              AGENT ACTIVITY
+            </p>
+
+            <h2>
+              Tool Calls
+            </h2>
+          </div>
+
+          <button
+            id="clear-events"
+            class="secondary-button"
+            type="button"
+          >
+            Clear
+          </button>
+
+        </div>
+
+        <div
+          id="events"
+          class="events"
+        >
+
+          <div class="empty-state">
+            Tool activity will appear here.
+          </div>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+    <section
+      id="confirmation-panel"
+      class="confirmation-panel hidden"
+    >
+
+      <div>
+
+        <p class="eyebrow warning-text">
+          HUMAN REVIEW REQUIRED
+        </p>
+
+        <h2>
+          Confirm uncertain contract fields
+        </h2>
+
+        <p>
+          The deterministic validation layer stopped the registration because
+          one or more fields require explicit human approval.
+        </p>
+
+      </div>
+
+      <div
+        id="confirmation-fields"
+        class="confirmation-fields"
+      ></div>
+
+      <div class="confirmation-actions">
+
+        <button
+          id="reject-button"
+          class="danger-button"
+          type="button"
+        >
+          Cancel Registration
+        </button>
+
+        <button
+          id="confirm-button"
+          type="button"
+        >
+          Confirm & Register
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script
+    src="/app.js"
+  ></script>
+
+</body>
+</html>
