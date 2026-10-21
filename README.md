@@ -10,7 +10,22 @@ The system combines conversational AI with deterministic business controls for c
 
 ## Live Demo
 
-https://periferia-contract-reception-agent.onrender.com
+Hi Hernan,
+
+I wanted to share a quick update regarding the live application.
+
+The free API model had reached its usage limit, so I have now added balance to the API account and updated the configuration. The live agent is working again and can be tested normally.
+
+You can access the application here:
+
+https://periferia-contract-reception-agent-2.onrender.com
+
+Please feel free to check the application at your convenience, and don’t hesitate to contact me if you experience any issues or need any additional information.
+
+Thank you again for your time and consideration.
+
+Best regards,  
+Ram Chandhar Muddam
 
 Health endpoint:
 
